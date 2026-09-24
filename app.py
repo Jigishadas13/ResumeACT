@@ -183,7 +183,7 @@ def extract_text(uploaded_file):
 # =========================================================
 
 st.markdown(
-    '<div class="main-title">📄 AI ATS Resume Analyzer</div>',
+    '<div class="main-title">AI ATS Resume Analyzer</div>',
     unsafe_allow_html=True
 )
 
@@ -204,7 +204,7 @@ col1, col2 = st.columns([1, 1], gap="large")
 with col1:
 
     st.markdown(
-        '<div class="card-title">📤 Upload Your Resume</div>',
+        '<div class="card-title">Upload Your Resume</div>',
         unsafe_allow_html=True
     )
 
@@ -232,7 +232,7 @@ with col1:
 with col2:
 
     st.markdown(
-        '<div class="card-title">💼 Job Description</div>',
+        '<div class="card-title">Job Description</div>',
         unsafe_allow_html=True
     )
 
@@ -247,7 +247,7 @@ with col2:
     )
 
     st.caption(
-        "💡 Tip: Include responsibilities and required skills "
+        "Tip: Include responsibilities and required skills "
         "for better matching."
     )
 
@@ -259,7 +259,7 @@ st.markdown("---")
 # =========================================================
 
 analyze = st.button(
-    "🚀 Analyze Resume",
+    "Analyze Resume",
     type="primary",
     use_container_width=True
 )
@@ -282,7 +282,7 @@ if analyze:
     # EXTRACT TEXT
     # -----------------------------------------------------
 
-    with st.spinner("📖 Extracting resume text..."):
+    with st.spinner("Extracting resume text..."):
 
         resume_text = extract_text(resume_file)
 
@@ -299,7 +299,7 @@ if analyze:
     # -----------------------------------------------------
 
     with st.spinner(
-        "🤖 Running AI-powered resume analysis..."
+        "Running AI-powered resume analysis..."
     ):
 
         result = calculate_hybrid_score(
@@ -307,13 +307,13 @@ if analyze:
             job_description
         )
 
-    st.success("✅ Resume analysis completed!")
+    st.success("Resume analysis completed!")
 
     # =====================================================
     # SCORE SECTION
     # =====================================================
 
-    st.markdown("## 🎯 Resume Compatibility Dashboard")
+    st.markdown("## Resume Compatibility Dashboard")
 
     ats_score = result["ats_score"]
 
@@ -332,7 +332,7 @@ if analyze:
         st.markdown(
             f"""
             <div class="score-card">
-                <div class="score-label">🎯 UNIFIED ATS SCORE</div>
+                <div class="score-label">UNIFIED ATS SCORE</div>
                 <div class="score-number">{ats_score}</div>
                 <div class="score-label">out of 100</div>
             </div>
@@ -345,7 +345,7 @@ if analyze:
         st.markdown(
             f"""
             <div class="score-card">
-                <div class="score-label">🧠 SKILL COVERAGE</div>
+                <div class="score-label">SKILL COVERAGE</div>
                 <div class="score-number">{skill_score}%</div>
                 <div class="score-label">Matched job skills</div>
             </div>
@@ -358,7 +358,7 @@ if analyze:
         st.markdown(
             f"""
             <div class="score-card">
-                <div class="score-label">🔍 SEMANTIC SIMILARITY</div>
+                <div class="score-label">SEMANTIC SIMILARITY</div>
                 <div class="score-number">{semantic_score}%</div>
                 <div class="score-label">Meaning-based matching</div>
             </div>
@@ -377,10 +377,10 @@ if analyze:
     # =====================================================
 
     tab1, tab2, tab3, tab4 = st.tabs([
-        "📊 Score Breakdown",
-        "🛠️ Skills Analysis",
-        "🔍 Semantic Details",
-        "📄 Resume Preview"
+        "Score Breakdown",
+        "Skills Analysis",
+        "Semantic Details",
+        "Resume Preview"
     ])
 
     # =====================================================
@@ -389,7 +389,7 @@ if analyze:
 
     with tab1:
 
-        st.markdown("### 📊 AI Scoring Components")
+        st.markdown("###  AI Scoring Components")
 
         score_data = {
             "TF-IDF": tfidf_score,
@@ -419,7 +419,7 @@ if analyze:
 
     with tab2:
 
-        st.markdown("### ✅ Matched Skills")
+        st.markdown("###  Matched Skills")
 
         matched_skills = result["matched_skills"]
 
@@ -446,7 +446,7 @@ if analyze:
 
         st.markdown("---")
 
-        st.markdown("### ⚠️ Missing Skills")
+        st.markdown("###  Missing Skills")
 
         missing_skills = result["missing_skills"]
 
@@ -477,7 +477,7 @@ if analyze:
 
     with tab3:
 
-        st.markdown("### 🔍 Semantic Matching Details")
+        st.markdown("###  Semantic Matching Details")
 
         for item in result["match_details"]:
 
@@ -502,7 +502,7 @@ if analyze:
 
     with tab4:
 
-        st.markdown("### 📄 Extracted Resume Text")
+        st.markdown("###  Extracted Resume Text")
 
         st.text_area(
             "Resume Content",
@@ -511,14 +511,14 @@ if analyze:
         )
 
         st.download_button(
-            "⬇️ Download Extracted Text",
+            "Download Extracted Text",
             data=resume_text,
             file_name="extracted_resume.txt",
             mime="text/plain",
             use_container_width=True
         )
 
-        with st.expander("🔎 View Extracted Phrases"):
+        with st.expander("View Extracted Phrases"):
 
             st.markdown("#### Job Description Phrases")
 
