@@ -26,6 +26,10 @@ st.markdown("""
     font-family: 'Inter', sans-serif;
 }
 
+/* =========================================================
+   MAIN APP
+   ========================================================= */
+
 .stApp {
     background: linear-gradient(135deg, #0b1120, #111827);
     color: #f8fafc;
@@ -36,7 +40,10 @@ st.markdown("""
     max-width: 1500px;
 }
 
-/* Header */
+
+/* =========================================================
+   HEADER
+   ========================================================= */
 
 .main-title {
     font-size: 42px;
@@ -48,12 +55,15 @@ st.markdown("""
 }
 
 .subtitle {
-    color: #94a3b8;
+    color: #cbd5e1 !important;
     font-size: 16px;
     margin-bottom: 30px;
 }
 
-/* Cards */
+
+/* =========================================================
+   CARD
+   ========================================================= */
 
 .card {
     background: rgba(30, 41, 59, 0.75);
@@ -66,11 +76,87 @@ st.markdown("""
 .card-title {
     font-size: 20px;
     font-weight: 700;
-    color: #f8fafc;
+    color: #f8fafc !important;
     margin-bottom: 15px;
 }
 
-/* Score */
+
+/* =========================================================
+   STREAMLIT LABELS
+   ========================================================= */
+
+/* File uploader label */
+[data-testid="stFileUploader"] label {
+    color: #f8fafc !important;
+}
+
+/* Text area label */
+[data-testid="stTextArea"] label {
+    color: #f8fafc !important;
+}
+
+/* All widget labels */
+[data-testid="stWidgetLabel"] p {
+    color: #f8fafc !important;
+}
+
+
+/* =========================================================
+   TEXT AREA
+   ========================================================= */
+
+textarea {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 12px !important;
+    font-size: 15px !important;
+}
+
+/* Placeholder text */
+textarea::placeholder {
+    color: #64748b !important;
+    opacity: 1 !important;
+}
+
+/* Text area when focused */
+textarea:focus {
+    border: 2px solid #6366f1 !important;
+    box-shadow: 0 0 0 1px #6366f1 !important;
+}
+
+
+/* =========================================================
+   FILE UPLOADER
+   ========================================================= */
+
+[data-testid="stFileUploader"] section {
+    background-color: #ffffff !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 12px !important;
+}
+
+/* File uploader text */
+[data-testid="stFileUploader"] section div {
+    color: #111827 !important;
+}
+
+/* Upload instructions */
+[data-testid="stFileUploader"] small {
+    color: #475569 !important;
+}
+
+/* Browse files button */
+[data-testid="stFileUploader"] button {
+    background-color: #4f46e5 !important;
+    color: #ffffff !important;
+    border: none !important;
+}
+
+
+/* =========================================================
+   SCORE CARDS
+   ========================================================= */
 
 .score-card {
     background: linear-gradient(135deg, #1e293b, #312e81);
@@ -83,20 +169,23 @@ st.markdown("""
 .score-number {
     font-size: 52px;
     font-weight: 800;
-    color: #a5b4fc;
+    color: #a5b4fc !important;
 }
 
 .score-label {
     font-size: 15px;
-    color: #cbd5e1;
+    color: #cbd5e1 !important;
 }
 
-/* Skill badges */
+
+/* =========================================================
+   SKILL BADGES
+   ========================================================= */
 
 .skill-badge {
     display: inline-block;
     background: #064e3b;
-    color: #6ee7b7;
+    color: #6ee7b7 !important;
     border: 1px solid #059669;
     padding: 8px 14px;
     border-radius: 20px;
@@ -108,7 +197,7 @@ st.markdown("""
 .missing-badge {
     display: inline-block;
     background: #451a03;
-    color: #fbbf24;
+    color: #fbbf24 !important;
     border: 1px solid #b45309;
     padding: 8px 14px;
     border-radius: 20px;
@@ -117,7 +206,10 @@ st.markdown("""
     font-weight: 600;
 }
 
-/* Buttons */
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
 
 .stButton > button {
     border-radius: 12px;
@@ -130,12 +222,80 @@ st.markdown("""
     transform: translateY(-2px);
 }
 
-/* Text area */
 
-textarea {
-    border-radius: 12px !important;
+/* =========================================================
+   NORMAL TEXT
+   ========================================================= */
+
+.stMarkdown,
+.stMarkdown p,
+.stMarkdown span {
+    color: #f8fafc;
 }
 
+.stCaption,
+[data-testid="stCaptionContainer"] {
+    color: #cbd5e1 !important;
+}
+
+
+/* =========================================================
+   TABS
+   ========================================================= */
+
+button[data-baseweb="tab"] {
+    color: #cbd5e1 !important;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: #818cf8 !important;
+}
+
+
+/* =========================================================
+   EXPANDER
+   ========================================================= */
+
+[data-testid="stExpander"] {
+    background-color: rgba(30, 41, 59, 0.7);
+    border-radius: 12px;
+}
+
+[data-testid="stExpander"] summary {
+    color: #f8fafc !important;
+}
+
+
+/* =========================================================
+   INFO / SUCCESS / ERROR BOXES
+   ========================================================= */
+
+[data-testid="stAlert"] {
+    color: #f8fafc !important;
+}
+
+[data-testid="stAlert"] p {
+    color: inherit !important;
+}
+
+
+/* =========================================================
+   RESUME PREVIEW TEXT AREA
+   ========================================================= */
+
+[data-testid="stTextArea"] textarea {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+}
+
+
+/* =========================================================
+   HORIZONTAL LINE
+   ========================================================= */
+
+hr {
+    border-color: rgba(148, 163, 184, 0.2) !important;
+}
 
 </style>
 """, unsafe_allow_html=True)
