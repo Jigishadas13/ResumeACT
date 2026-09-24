@@ -1,7 +1,7 @@
 # Resume Screening & Job Matching System
 
 **Live Application: https://qpgrevkp4vssa6gkyrf2mx.streamlit.app/  
-**GitHub Repository:** https://github.com/anusha0934/resume-screening-job-matching
+**GitHub Repository:** https://github.com/Jigishadas13/ResumeACT.git
 
 ---
 
@@ -92,8 +92,8 @@ streamlit run app.py
 ---
 
 ## Author
-Anusha K A
-Mysore, Karnataka
+Jigisha Das
+Bhubaneswar,Odisha
 
 
 
