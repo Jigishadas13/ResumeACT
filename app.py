@@ -10,7 +10,6 @@ from utils import calculate_hybrid_score
 
 st.set_page_config(
     page_title="AI ATS Analyzer",
-    page_icon="📄",
     layout="wide",
 )
 
