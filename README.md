@@ -60,7 +60,7 @@ resume_job_matcher/
 ## ▶️ How to Run Locally
 
 step 1: Clone the repository
-git clone https://github.com/anusha0934/resume-screening-job-matching.git
+git clone https://github.com/Jigishadas13/ResumeACT.git
 cd resume-screening-job-matching
 step 2: Create and activate a virtual environment
 python -m venv venv
