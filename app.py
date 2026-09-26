@@ -9,7 +9,7 @@ from utils import calculate_hybrid_score
 # =========================================================
 
 st.set_page_config(
-    page_title="AI ATS Analyzer",
+    page_title="ResumeACT - AI ATS Analyzer",
     layout="wide",
 )
 
