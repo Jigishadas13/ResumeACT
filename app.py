@@ -342,7 +342,7 @@ def extract_text(uploaded_file):
 # =========================================================
 
 st.markdown(
-    '<div class="main-title">AI ATS Resume Analyzer</div>',
+    '<div class="main-title"> ResumACT - AI ATS Resume Analyzer</div>',
     unsafe_allow_html=True
 )
 
